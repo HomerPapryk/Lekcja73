@@ -27,6 +27,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const select = document.getElementById("currencySelect");
     select.innerHTML = "";
 
+    // Dodanie opcji domyślnej
+    const defaultOption = document.createElement("option");
+    defaultOption.value = "";
+    defaultOption.textContent = "Wybierz walutę do przeliczenia";
+    defaultOption.disabled = true;
+    defaultOption.selected = true;
+    select.appendChild(defaultOption);
+
     for (const [currency, rate] of Object.entries(currencies)) {
       const option = document.createElement("option");
       option.value = currency;

@@ -9,7 +9,8 @@ h1 {
   color: #333;
 }
 
-select {
+/* Stylowanie selecta przez klasę */
+.currency-select {
   font-size: 16px;
   padding: 10px;
   border: 1px solid #ccc;
@@ -18,7 +19,8 @@ select {
   width: 200px;
 }
 
-button {
+/* Stylowanie przycisków przez klasę */
+.currency-button {
   font-size: 16px;
   padding: 10px 20px;
   border: none;
@@ -28,6 +30,9 @@ button {
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #0056b3;
+/* Hover tylko na urządzeniach, które go obsługują */
+@media (hover: hover) {
+  .currency-button:hover {
+    background-color: #0056b3;
+  }
 }
